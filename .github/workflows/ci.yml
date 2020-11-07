@@ -15,7 +15,7 @@ jobs:
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
-      - run: cargo install cargo-insta
+      - run: cargo install --git https://github.com/c-spencer/insta.git --branch 137-inline-unicode
       - run: cargo insta test --accept
         env:
             RUST_BACKTRACE: 1
